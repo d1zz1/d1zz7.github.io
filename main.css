@@ -1,0 +1,50 @@
+/* Centering container */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: white;
+  }
+  
+  /* Animation for the wave effect on letters */
+  .magic-text {
+    display: inline-block;
+  }
+  
+  .magic-text span {
+    display: inline-block;
+    animation: waveColors 2s infinite alternate;
+  }
+  
+  @keyframes waveColors {
+    0%   { color: #9b59b6; }  /* Light purple */
+    50%  { color: #8e44ad; }  /* Dark purple */
+    100% { color: #3498db; }  /* Blue */
+  }
+  
+  /* Staggered animation delays for the wave effect */
+  .magic-text span:nth-child(1) { animation-delay: 0s; }
+  .magic-text span:nth-child(2) { animation-delay: 0.2s; }
+  .magic-text span:nth-child(3) { animation-delay: 0.4s; }
+  .magic-text span:nth-child(4) { animation-delay: 0.6s; }
+  
+  h1, p {
+    margin: 10px 0;
+  }
+  
+  /* For extra styling or to add space between text */
+  .mt-5 {
+    margin-top: 20px;
+  }
+  
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .italic {
+    font-style: italic;
+  }
+  

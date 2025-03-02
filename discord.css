@@ -1,0 +1,90 @@
+/* Centering container */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: white;
+  }
+  
+  /* Animation for the wave effect on letters */
+  .magic-text {
+    display: inline-block;
+  }
+  
+  .magic-text span {
+    display: inline-block;
+    animation: waveColors 2s infinite alternate;
+  }
+  
+  @keyframes waveColors {
+    0%   { color: #926f12; }  /* Light purple */
+    50%  { color: #f3df2f; }  /* Dark purple */
+    100% { color: #77732b; }  /* Blue */
+  }
+  
+  /* Staggered animation delays for the wave effect */
+  .magic-text span:nth-child(1) { animation-delay: 0s; }
+  .magic-text span:nth-child(2) { animation-delay: 0.2s; }
+  .magic-text span:nth-child(3) { animation-delay: 0.4s; }
+  .magic-text span:nth-child(4) { animation-delay: 0.6s; }
+  
+  h1, p {
+    margin: 10px 0;
+  }
+  
+  /* For extra styling or to add space between text */
+  .mt-5 {
+    margin-top: 20px;
+  }
+  
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .italic {
+    font-style: italic;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+.username {
+    font-size: 18px;
+    margin: 0;
+    color: #fff;
+}
+
+.status {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+}
+
+  

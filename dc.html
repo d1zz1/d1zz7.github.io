@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>d1z7.web</title>
+
+  <!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="discord.css">
+<link rel="stylesheet" href="Skills.html">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXRNb06tY/46XJdBzncyD+51E5lxm8i6f70D5clc0UX/gI8mpx6l5vHqgljgV5GLycPz4Feg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Reset and basic settings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      background-color: #000; /* Constant black background */
+      overflow-x: hidden;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+    }
+    header h1 {
+      font-size: 2.5em;
+      letter-spacing: 2px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffeb3b;
+    }
+    /* Hero section with About Me introduction */
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1.5s forwards;
+    }
+    .hero p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1.5s forwards;
+      animation-delay: 0.5s;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* About Me content section */
+    .content {
+      padding: 50px 20px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    .content h3 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .card.in-view {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .card i {
+      font-size: 3em;
+      margin-bottom: 15px;
+      display: block;
+    }
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1></h1>
+    <nav>
+      <a href="main.html">Main</a>
+      <a href="discord.html">Discord</a>
+      <a href="Skills.html">My skills</a>
+    </nav>
+  </header>
+
+  <div class="center-content">
+    <!-- Animated text (d1zz7) -->
+    <h1 class="text-3xl">
+      My <span class="magic-text font-bold">
+        <span>d</span>
+        <span>i</span>
+        <span>s</span>
+        <span>c</span>
+        <span>o</span>
+        <span>r</span>
+        <span>d</span>
+      </span>
+    </h1>
+
+   
+    <div class="profile">
+        <a href="https://discord.com/users/880469426464522340" class="profile-link">
+            <img src="https://th.bing.com/th/id/R.064be3ad6ecc90a32aabc40e97686928?rik=iXh4sIEduXURkg&pid=ImgRaw&r=0" alt="Avatar" class="avatar">
+            <div class="profile-info">
+                <h1 class="username">d1zz7.p</h1>
+                <p class="status">Do Not Disturb</p>
+            </div>
+        </a>
+    </div>
+    
+    <!-- Additional text -->
+
+
+
+  </div>
+  
+  <script>
+    // JavaScript for scroll-triggered animations
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = { threshold: 0.1 };
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      const animElements = document.querySelectorAll('.animate');
+      animElements.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
